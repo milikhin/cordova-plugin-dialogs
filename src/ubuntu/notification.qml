@@ -19,9 +19,9 @@
  *
 */
 
-import QtQuick 2.0
-import Ubuntu.Components.Popups 0.1
-import Ubuntu.Components 0.1
+import QtQuick 2.4
+import Ubuntu.Components.Popups 1.3
+import Ubuntu.Components 1.3
 
 Dialog {
     id: dialogue
@@ -39,7 +39,7 @@ Dialog {
     }
     Button {
         text: button1Text
-        color: "orange"
+        color: "green"
         onClicked: {
             root.exec("Notification", "notificationDialogButtonPressed", [1, prompt.text, promptVisible]);
             PopupUtils.close(dialogue)
@@ -48,7 +48,6 @@ Dialog {
     Button {
         text: button2Text
         visible: button2Text.length > 0
-        color: "orange"
         onClicked: {
             root.exec("Notification", "notificationDialogButtonPressed", [2, prompt.text, promptVisible]);
             PopupUtils.close(dialogue)
